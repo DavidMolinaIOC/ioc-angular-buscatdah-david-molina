@@ -8,5 +8,9 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
 })
 export class App {
+
+  //añadimos el nombre publico
+  public nomApp: string = 'BuscaTDAH';
+  
   protected readonly title = signal('ioc-angular-buscatdah-david-molina');
 }

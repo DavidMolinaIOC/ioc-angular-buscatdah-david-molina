@@ -1,0 +1,22 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #f4f4f9;
+}
+
+.targeta {
+    border: 2px solid black;
+    background-color: lightgray;
+    padding: 15px;
+}
+
+.nota-aside {
+    border: 2px dashed blue;
+    background-color: lightyellow;
+    padding: 15px;
+}
