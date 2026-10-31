@@ -1,0 +1,60 @@
+.salt-contingut {
+  position: absolute;
+  top: -50px;
+  left: 10px;
+  background: #0d9488;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+
+  &:focus {
+    top: 10px;
+  }
+}
+
+.capcalera,
+.contenidor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.layout-cataleg {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.panell-detall {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 16px;
+  height: fit-content;
+}
+
+.sense-resultats {
+  padding: 16px;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .layout-cataleg {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

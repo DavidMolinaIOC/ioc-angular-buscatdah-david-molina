@@ -1,0 +1,62 @@
+.formulari-filtre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+  background-color: #f8fafc;
+  padding: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.camp {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  input,
+  select {
+    padding: 6px 10px;
+    border: 1px solid #94a3b8;
+    border-radius: 4px;
+  }
+}
+
+.missatge-error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin: 4px 0 0 0;
+}
+
+.accions {
+  display: flex;
+  gap: 8px;
+  margin-top: 22px;
+
+  button {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #0d9488;
+    background-color: #0d9488;
+    color: white;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #94a3b8;
+      border-color: #94a3b8;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .formulari-filtre {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .accions {
+    margin-top: 8px;
+  }
+}

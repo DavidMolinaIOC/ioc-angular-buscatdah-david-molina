@@ -1,8 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { LlistaRecursosComponent } from './components/llista-recursos/llista-recursos.component';
+
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, LlistaRecursosComponent],
   selector: 'app-root',
   styleUrl: './app.component.scss',
   templateUrl: './app.component.html',

@@ -1,0 +1,20 @@
+<article class="targeta" [class.targeta--destacada]="element.destacat">
+  <div class="targeta__contingut">
+    <app-etiqueta-categoria
+      [categoria]="element.categoria"
+      [destacat]="element.destacat || false">
+    </app-etiqueta-categoria>
+
+    <h3 class="targeta__nom">{{ element.titol }}</h3>
+    <p class="targeta__descripcio">{{ element.descripcio }}</p>
+
+    <div class="targeta__peu">
+      <span class="targeta__data">Data: {{ element.data | date:'dd/MM/yyyy' }}</span>
+      <span class="targeta__puntuacio">Valoració: {{ element.puntuacio }} / 5</span>
+
+      <button type="button" (click)="onClicDetall()">
+        Veure detall
+      </button>
+    </div>
+  </div>
+</article>

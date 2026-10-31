@@ -1,0 +1,29 @@
+.targeta {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #ffffff;
+
+  &--destacada {
+    border: 2px solid #0d9488;
+  }
+
+  &__nom {
+    margin: 8px 0;
+  }
+
+  &__descripcio {
+    color: #475569;
+    margin-bottom: 12px;
+  }
+
+  &__peu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+  }
+}

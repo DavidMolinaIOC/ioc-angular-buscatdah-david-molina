@@ -1,0 +1,54 @@
+<a class="salt-contingut" href="#contingut-principal">Salta al contingut principal</a>
+
+<header class="capcalera">
+  <h1>Catàleg BuscaTDAH</h1>
+  <p role="status" aria-live="polite">
+    Resultats trobats: <strong>{{ totalResultats }}</strong>
+  </p>
+</header>
+
+<main id="contingut-principal" class="contenidor">
+  <app-filtre-recursos
+    [categories]="categories"
+    (aplicar)="aplicarFiltres({ text: $event.text, categoria: $event.categoria, nomesDestacats: false })"
+    (restablir)="restablirFiltres()">
+  </app-filtre-recursos>
+
+  <div class="layout-cataleg">
+    <section class="llistat">
+      @if (elementsFiltrats.length > 0) {
+        <ul class="grid">
+          @for (element of elementsFiltrats; track element.id) {
+            <li>
+              <app-targeta-recurs
+                [element]="element"
+                (seleccionarElement)="onSeleccionarElement($event)">
+              </app-targeta-recurs>
+            </li>
+          }
+        </ul>
+      } @else {
+        <p class="sense-resultats" role="alert">
+          No hi ha cap element que coincideixi amb la cerca.
+        </p>
+      }
+    </section>
+
+    <aside class="panell-detall" aria-live="polite">
+      @if (elementSeleccionat) {
+        <div class="detall">
+          <h2>Detall de l'element</h2>
+          <p><strong>ID:</strong> {{ elementSeleccionat.id }}</p>
+          <p><strong>Títol:</strong> {{ elementSeleccionat.titol }}</p>
+          <p><strong>Categoria:</strong> {{ elementSeleccionat.categoria }}</p>
+          <p><strong>Data:</strong> {{ elementSeleccionat.data | date:'dd/MM/yyyy' }}</p>
+          <p><strong>Puntuació:</strong> {{ elementSeleccionat.puntuacio }} / 5</p>
+          <p><strong>Destacat:</strong> {{ elementSeleccionat.destacat ? 'Sí' : 'No' }}</p>
+          <p><strong>Descripció:</strong> {{ elementSeleccionat.descripcio }}</p>
+        </div>
+      } @else {
+        <p>Fes clic a "Veure detall" d'un element per mostrar la informació.</p>
+      }
+    </aside>
+  </div>
+</main>

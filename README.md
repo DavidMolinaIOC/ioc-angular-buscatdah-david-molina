@@ -5,10 +5,10 @@ David Molina Benitez
 ## Descripció
 Ajuda a fer les tasques del dia a dia.
 ## Versions utilitzades
-Angular 22, Node.js, npm
+Angular 22, Node.js, npm, Angular CI 22, TypeScript 6
 ## Com crear i executar el projecte
-Descarreguem el repositori, instalem les dependencies npm, executem el servidor per poder navegar dins l'aplicació amb un explorador.
-## Estat de l'EAC1
-Completat
+Descarreguem el repositori, instalem les dependencies npm, executem el servidor per poder navegar dins l'aplicació amb un explorador, execuar test: ng test i compilar el projecte ng build.
+## Components creats
+LlistaRecursosComponents, TargetaRecursComponent, EtiquetaCategoraComponent, FiltreRecursosComponent
 ## Enllaç del repositori
 https://github.com/DavidMolinaIOC/ioc-angular-buscatdah-david-molina
